@@ -364,11 +364,18 @@ a:hover:after{
 }
 
 .glow-text {
-  color: #ffffff;
-  font-size: 1.8rem;
-  font-weight: bold;
-  text-shadow: 0 0 10px #ff3860, 0 0 20px #ff3860, 0 0 30px #ff3860;
+  color: #000000; /* 黑色文字 */
+  font-size: 1.5rem;
+  font-weight: normal;
+  text-shadow: 
+    0 0 3px rgba(0, 0, 0, 0.2), 
+    0 0 6px rgba(0, 0, 0, 0.1);
 }
+
+
+
+
+
 
 
 h2.title {
