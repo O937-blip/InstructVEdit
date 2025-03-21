@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>InstructVEdit: A Holistic Approach for Instructional Video Editing</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\\(','\\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">InstructVEdit: A Holistic Approach for Instructional Video Editing</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <span>Chi Zhang</span><sup>1</sup>
+              <span class="author-block">
+                <span>Chengjian Feng</span><sup>2</sup>
+              <span class="author-block">
+                <span>Feng Yan</span><sup>2</sup>
+              <span class="author-block">
+                <span>Qiming Zhang</span><sup>3</sup>
+              </span>
+              <span class="author-block">
+                <span>Mingjin Zhang</span><sup>1</sup>
+              </span>
+              <span class="author-block">
+                <span>Yujie Zhong</span><sup>2</sup>
+              </span>
+              <span class="author-block">
+                <span>Jing Zhang</span><sup>4</sup>
+              </span>
+              <span class="author-block"></span>
+                <span>Lin Ma</span><sup>2</sup>
+              </span>
+            </div>
+  
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Xidian University,</span>
+              <span class="author-block"><sup>2</sup>Meituan Inc.</span>
+              <span class="author-block"><sup>3</sup>University of Sydney</span>
+              <span class="author-block"><sup>4</sup>Wuhan University</span>
+            </div>
+  
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href=""
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href=""
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <!-- <span class="link-block">
+                  <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span> -->
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href=""
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code (Comming Soon)</span>
+                    </a>
+                </span>
+                <!-- Dataset Link. -->
+                <!-- <span class="link-block">
+                  <a href=""
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="far fa-images"></i>
+                    </span>
+                    <span>Data (Comming Soon!)</span>
+                    </a> -->
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <h1 class="xtitle is-1 publication-title">InstructVEdit: A Holistic Approach for Instructional Video Editing</h1>
+                    <div class="is-size-5 publication-conference">
+                        <span class="conference-block"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+<section class="section" style="padding-top: 1rem; padding-bottom: 1rem;"></section>
+<h2 class="subtitle has-text-centered glow-text">
+  InstructVEdit edits realistic videos according to instructions.
+</h2>
+
+  <div class="container">
+    <div class="columns is-multiline is-centered is-gapless">
+      <div class="column is-one-third">
+        <figure class="image hover-effect">
+          <img src="static/images/elephant_snow.gif" alt="Make it snow.">
+          <figcaption class="has-text-centered">Make it snow.</figcaption>
+        </figure>
+      </div>
+      <div class="column is-one-third">
+        <figure class="image hover-effect">
+          <img src="static/images/spaklingbear.gif" alt="Make it sparkling crtstal.">
+          <figcaption class="has-text-centered">Make it sparkling crtstal.</figcaption>
+        </figure>
+      </div>
+      <div class="column is-one-third">
+        <figure class="image hover-effect">
+          <img src="static/images/apples.gif" alt="Turn the oranges into apples and the basket are made of metal.">
+          <figcaption class="has-text-centered">Turn the oranges into apples and the basket are made of metal.</figcaption>
+        </figure>
+      </div>
+    </div>    
+  </div>
+</section>
+
+<section class="section" style="padding-top: 1rem; padding-bottom: 1rem;"></section>
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Video editing according to instructions is a highly challenging task due to the difficulty in collecting large-scale, high-quality edited video pair data. This scarcity not only limits the availability of training data but also hinders the systematic exploration of model architectures and training strategies.
+            While prior work has improved specific aspects of video editing (e.g., synthesizing a video dataset using image editing techniques or decomposed video editing training), a holistic framework addressing the above challenges remains underexplored.
+          </p>
+          <p>
+            In this study, we introduce InstructVEdit, a full-cycle instructional video editing approach that: (1) establishes a reliable dataset curation workflow to initialize training, (2) incorporates two model architectural improvements to enhance edit quality while preserving temporal consistency, and (3) proposes an iterative refinement strategy leveraging real-world data to enhance generalization and minimize train-test discrepancies.
+          </p>
+          <p>
+            Extensive experiments show that InstructVEdit achieves state-of-the-art performance in instruction-based video editing, demonstrating robust adaptability to diverse real-world scenarios. Codes, models, and datasets will be released to facilitate further research.
+          </p>
+          
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+   
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<section class="section"></section>
+  <div class="container">
+
+    <!-- Local Edit 分类 -->
+    <h2 class="title is-3 has-text-centered">Local Edit</h2>
+
+    <!-- 子分类 Object Manipulation -->
+    <h3 class="subtitle is-4 has-text-left">Object Manipulation</h3>
+    <div class="columns is-multiline is-centered is-variable is-2">
+      <div class="column is-one-third">
+        <figure class="image hover-effect">
+          <img src="static/images/cloud.gif" alt="Object manipulation example 1">
+          <figcaption class="has-text-centered">Change the table to a floating cloud.</figcaption>
+        </figure>
+      </div>
+      <div class="column is-one-third">
+        <figure class="image hover-effect">
+          <img src="static/images/kite.gif" alt="Object manipulation example 2">
+          <figcaption class="has-text-centered">Change the kite into a hot air balloon.</figcaption>
+        </figure>
+      </div>
+      <div class="columns is-multiline is-centered is-variable is-2">
+        <div class="column is-one-third">
+          <figure class="image hover-effect">
+            <img src="static/images/dog_cat.gif" alt="Object manipulation example 1">
+            <figcaption class="has-text-centered">Change the dig to a cat.</figcaption>
+          </figure>
+        </div>
+        <div class="column is-one-third">
+          <figure class="image hover-effect">
+            <img src="static/images/dogie.gif" alt="Object manipulation example 2">
+            <figcaption class="has-text-centered">Change the samoyed to a golden retriever.</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="columns is-multiline is-centered is-variable is-2"></div>
+        <div class="column is-one-third">
+          <figure class="image hover-effect">
+            <img src="static/images/flowers.gif" alt="Object manipulation example 1">
+            <figcaption class="has-text-centered">Change the dirt into a field of purple flowers.</figcaption>
+          </figure>
+        </div>
+        <div class="column is-one-third">
+          <figure class="image hover-effect">
+            <img src="static/images/starry.gif" alt="Object manipulation example 2">
+            <figcaption class="has-text-centered">Turn the background into a starry night.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <!-- 子分类 Attribute Manipulation -->
+    <h3 class="subtitle is-4 has-text-left" style="margin-top: 2rem;">Attribute Manipulation</h3>
+    <div class="columns is-multiline is-centered is-variable is-2">
+      <div class="column is-one-third">
+        <figure class="image hover-effect">
+          <img src="static/images/american.gif" alt="Attribute manipulation example 1">
+          <figcaption class="has-text-centered">Change the American flag to a rainbow flag.</figcaption>
+        </figure>
+      </div>
+      <div class="column is-one-third">
+        <figure class="image hover-effect">
+          <img src="static/images/metal.gif" alt="Attribute manipulation example 2">
+          <figcaption class="has-text-centered">Give the vase a metallic finish.</figcaption>
+        </figure>
+      </div>
+      <div class="columns is-multiline is-centered is-variable is-2">
+        <div class="column is-one-third">
+          <figure class="image hover-effect">
+            <img src="static/images/fire.gif" alt="Attribute manipulation example 3">
+            <figcaption class="has-text-centered">The waves are made of fire.</figcaption>
+          </figure>
+        </div>
+        <div class="column is-one-third">
+          <figure class="image hover-effect">
+            <img src="static/images/orange.gif" alt="Attribute manipulation example 4">
+            <figcaption class="has-text-centered">Adjust the sky to have a more vibrant orange hue.</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="columns is-multiline is-centered is-variable is-2"></div>
+        <div class="column is-one-third">
+          <figure class="image hover-effect">
+            <img src="static/images/rose.gif" alt="Attribute manipulation example 3">
+            <figcaption class="has-text-centered">Make roses rainbow colored.</figcaption>
+          </figure>
+        </div>
+        <div class="column is-one-third">
+          <figure class="image hover-effect">
+            <img src="static/images/tranquil.gif" alt="Attribute manipulation example 4">
+            <figcaption class="has-text-centered">For a more tranquil effect.</figcaption>
+          </figure>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- Global Edit 分类 -->
+    <h2 class="title is-3 has-text-centered" style="margin-top: 4rem;">Global Edit</h2>
+    <div class="columns is-multiline is-centered is-variable is-2">
+      <div class="column is-one-third">
+        <figure class="image hover-effect">
+          <img src="static/images/mystry.gif" alt="Global edit example 1">
+          <figcaption class="has-text-centered">Transform the scene into a mystical forest setting.</figcaption>
+        </figure>
+      </div>
+      <div class="column is-one-third">
+        <figure class="image hover-effect">
+          <img src="static/images/selfie.gif" alt="Global edit example 2">
+          <figcaption class="has-text-centered">Change the background to a futuristic cityscape with neon lights.</figcaption>
+        </figure>
+      </div>      
+      <div class="columns is-multiline is-centered is-variable is-2">
+        <div class="column is-one-third">
+          <figure class="image hover-effect">
+            <img src="static/images/underwater.gif" alt="Global edit example 2">
+            <figcaption class="has-text-centered">Turn it into a dreamy underwater world.</figcaption>
+          </figure>
+        </div>
+        <div class="column is-one-third">
+          <figure class="image hover-effect">
+            <img src="static/images/cartoon.gif" alt="Global edit example 4">
+            <figcaption class="has-text-centered">Make it cartoon.</figcaption>
+          </figure>
+        </div>      
+        
+      </div>
+      <div class="columns is-multiline is-centered is-variable is-2"></div>
+        <div class="column is-one-third">
+          <figure class="image hover-effect">
+            <img src="static/images/oilpainting.gif" alt="Global edit example 5">
+            <figcaption class="has-text-centered">Make it oil painting.</figcaption>
+          </figure>
+        </div>
+        <div class="column is-one-third">
+          <figure class="image hover-effect">
+            <img src="static/images/sketch.gif" alt="Global edit example 6">
+            <figcaption class="has-text-centered">Transform the image into a hand-drawn pencil sketch.</figcaption>
+          </figure>
+        </div>      
+        
+      </div>
+    </div>
+    
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+      <h2 class="title has-text-centered">Visual Comparison on TGVE dataset</h2>
+    <div class="columns is-multiline is-centered">
+      <div class="column is-12 has-text-centered">
+          <p class="subtitle is-italic">Make the style Minecraft.</p>
+          <div class="columns has-text-centered">
+              <div class="column">
+                  <p class="is-italic">Original</p>
+                  <img src="static/images/gt_daytime.gif" alt="Original">
+              </div>
+              <div class="column">
+                  <p class="is-italic">Tune-a-Video</p>
+                  <img src="static/images/tav_daytime.gif" alt="Tune-a-Video">
+              </div>
+              <div class="column">
+                  <p class="is-italic">AnyV2V</p>
+                  <img src="static/images/anyv2v_daytime.gif" alt="AnyV2V">
+              </div>
+              <div class="column">
+                  <p class="is-italic">TokenFlow</p>
+                  <img src="static/images/TokenFlow_daytime.gif" alt="TokenFlow">
+              </div>
+              <div class="column">
+                  <p class="is-italic">InsV2V</p>
+                  <img src="static/images/Insv2v_daytime.gif" alt=InsV2V">
+              </div>
+              <div class="column">
+                  <p class="is-italic">Ours</p>
+                  <img src="static/images/Ours_daytime.gif" alt="Ours">
+              </div>
+          </div>
+      </div>
+
+
+
+          <div class="columns is-multiline is-centered">
+            <div class="column is-12 has-text-centered">
+                <p class="subtitle is-italic">Make it snowy day.</p>
+                <div class="columns has-text-centered">
+                    <div class="column">
+                        <p class="is-italic">Original</p>
+                        <img src="static/images/gt_bird.gif" alt="Original">
+                    </div>
+                    <div class="column">
+                        <p class="is-italic">Tune-a-Video</p>
+                        <img src="static/images/tav_bird.gif" alt="Tune-a-Video">
+                    </div>
+                    <div class="column">
+                        <p class="is-italic">AnyV2V</p>
+                        <img src="static/images/anyv2v_bird.gif" alt="AnyV2V">
+                    </div>
+                    <div class="column">
+                        <p class="is-italic">TokenFlow</p>
+                        <img src="static/images/TokenFlow_bird.gif" alt="TokenFlow">
+                    </div>
+                    <div class="column">
+                        <p class="is-italic">InsV2V</p>
+                        <img src="static/images/Insv2v_bird.gif" alt="InsV2V">
+                    </div>
+                    <div class="column">
+                        <p class="is-italic">Ours</p>
+                        <img src="static/images/ours1.gif" alt="Ours">
+                    </div>
+                </div>
+            </div>
+
+
+
+              <div class="columns is-multiline is-centered">
+                <div class="column is-12 has-text-centered">
+                    <p class="subtitle is-italic">Change the cat to be made of paper.</p>
+                    <div class="columns has-text-centered">
+                        <div class="column">
+                            <p class="is-italic">Original</p>
+                            <img src="static/images/gt_cat.gif" alt="Original">
+                        </div>
+                        <div class="column">
+                            <p class="is-italic">Tune-a-Video</p>
+                            <img src="static/images/tav_cat.gif" alt="Tune-a-Video">
+                        </div>
+                        <div class="column">
+                            <p class="is-italic">AnyV2V</p>
+                            <img src="static/images/anyv2v_cat.gif" alt="AnyV2V">
+                        </div>
+                        <div class="column">
+                            <p class="is-italic">TokenFlow</p>
+                            <img src="static/images/tokenflow_cat.gif" alt="TokenFlow">
+                        </div>
+                        <div class="column">
+                            <p class="is-italic">InsV2V</p>
+                            <img src="static/images/insv2v_cat.gif" alt="InsV2V">
+                        </div>
+                        <div class="column">
+                            <p class="is-italic">Ours</p>
+                            <img src="static/images/ours_cat.gif" alt="Ours">
+                        </div>
+                    </div>
+                </div>
+  </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+<div class="marquee-wrapper">
+	<div class="container">
+		<div class="marquee-block">
+			<div class="marquee-inner to-left">
+				<span>
+					<div class="marquee-item">
+            <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+						<p class="text-white">1</p>
+					</div>
+					<div class="marquee-item">
+            <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+						<p class="text-white">2</p>
+					</div>
+					<div class="marquee-item">
+            <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
+						<p class="text-white">3</p>
+					</div>
+					<div class="marquee-item">
+            <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
+						<p class="text-white">4</p>
+					</div>
+					<div class="marquee-item">
+            <img src="static/images/carousel5.jpg" alt="MY ALT TEXT"/>
+						<p class="text-white">5</p>
+					</div>
+				</span>
+				<span>
+					<div class="marquee-item">
+            <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+						<p class="text-white">1</p>
+					</div>
+					<div class="marquee-item">
+            <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+						<p class="text-white">2</p>
+					</div>
+					<div class="marquee-item">
+            <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
+						<p class="text-white">3</p>
+					</div>
+					<div class="marquee-item">
+            <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
+						<p class="text-white">4</p>
+					</div>
+					<div class="marquee-item">
+            <img src="static/images/carousel5.jpg" alt="MY ALT TEXT"/>
+						<p class="text-white">5</p>
+					</div>
+				</span>
+			</div>
+		</div>
+
+  </div>
+</section> -->
+
+<!-- Teaser video-->
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%"> -->
+        <!-- Your video here -->
+        <!-- <source src="static/videos/banner_video.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+      </h2>
+    </div>
+  </div>
+</section> -->
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<!-- <section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End paper abstract -->
+
+
+<!-- Image carousel -->
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item"> -->
+        <!-- Your image here -->
+        <!-- <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          First image description.
+        </h2>
+      </div>
+      <div class="item"> -->
+        <!-- Your image here -->
+        <!-- <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Second image description.
+        </h2>
+      </div>
+      <div class="item"> -->
+        <!-- Your image here -->
+        <!-- <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+         Third image description.
+       </h2>
+     </div>
+     <div class="item"> -->
+      <!-- Your image here -->
+      <!-- <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+        Fourth image description.
+      </h2>
+    </div>
+  </div>
+</div>
+</div>
+</section> -->
+<!-- End image carousel -->
+
+
+
+
+<!-- Youtube video -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container"> -->
+      <!-- Paper video. -->
+      <!-- <h2 class="title is-3">Video Presentation</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <div class="publication-video"> -->
+            <!-- Youtube embed code here -->
+            <!-- <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End youtube video -->
+
+
+<!-- Video carousel -->
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Another Carousel</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%"> -->
+            <!-- Your video file here -->
+            <!-- <source src="static/videos/carousel1.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%"> -->
+            <!-- Your video file here -->
+            <!-- <source src="static/videos/carousel2.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+            Your video file here -->
+            <!-- <source src="static/videos/carousel3.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End video carousel -->
+
+
+<!-- Paper poster 
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section>
+End paper poster -->
+
+
+<!--BibTex citation -->
+  <!-- <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>BibTex Code Here</code></pre>
+    </div>
+</section> -->
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/vinthony/project-page-template">modification version</a> of <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> from <a href="https://github.com/vinthony">vinthony</a>.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
